@@ -1,15 +1,18 @@
 # Đồ án: Kỹ thuật vi hệ thống siêu cao tần (EE5429)
 
-**Nhóm 01**
+## **Nhóm 01**
 
 **Tên đề tài:** Khử ảnh hưởng bộ chuyển kết nối và định vị gián đoạn từ tham số S (De-embedding and Discontinuity Localization from S-parameters).
 
 ---
 **[Project Plan - Dự án Kế hoạch](https://docs.google.com/spreadsheets/d/1WzEuhW8v6pte6aKQZzRB8YIo7CVdOmkQIDitc5sCpwo/edit?usp=sharing)**
+
 ---
 
 ## 1. Mục tiêu đề tài
+
 Xây dựng một chương trình (phần mềm) có khả năng:
+
 1. Đọc dữ liệu tham số S từ file Touchstone `.s2p`.
 2. Khử ảnh hưởng của hai bộ chuyển kết nối hoặc test fixture (De-embedding).
 3. Chuyển đổi giữa ma trận $S$ và ma trận truyền $T$.
@@ -19,6 +22,7 @@ Xây dựng một chương trình (phần mềm) có khả năng:
 7. So sánh kết quả tự viết với thư viện hoặc phần mềm tham chiếu chuẩn.
 
 ## 2. Cơ sở lý thuyết cơ bản
+
 * **Phương pháp de-embedding (khử fixture):**
   Hai cổng có thể thực hiện bằng công thức ma trận truyền:
   $[T_{do}] = [T_L][T_{DUT}][T_R]$
@@ -27,8 +31,9 @@ Xây dựng một chương trình (phần mềm) có khả năng:
   Thực hiện bằng cách biến đổi dữ liệu phản xạ từ miền tần số sang miền thời gian dựa trên biến đổi IFFT, từ đó tính toán khoảng cách dựa trên trễ thời gian và vận tốc lan truyền.
 
 ## 3. Công nghệ và Yêu cầu kỹ thuật
+
 * **Ngôn ngữ lập trình:** Python.
-* **Thư viện hỗ trợ:** 
+* **Thư viện hỗ trợ:**
   * `numpy`: Xử lý số phức, ma trận, FFT/IFFT.
   * `matplotlib`: Vẽ đồ thị trực quan hóa.
   * `csv`: Xuất/nhập kết quả.
@@ -107,12 +112,16 @@ sparameter-project/
 ## 7. Hướng dẫn sử dụng (Usage)
 
 1. Cài đặt các thư viện yêu cầu:
+
    ```bash
    pip install -r requirements.txt
    ```
+
 2. Cấu hình đường dẫn file đầu vào trong `examples/config.json`.
 3. Chạy chương trình chính:
+
    ```bash
    python main.py
    ```
+
 4. Kiểm tra kết quả trực quan trên giao diện (đồ thị) và file xuất ra tại thư mục `results/`.
