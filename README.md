@@ -5,6 +5,8 @@
 **Tên đề tài:** Khử ảnh hưởng bộ chuyển kết nối và định vị gián đoạn từ tham số S (De-embedding and Discontinuity Localization from S-parameters).
 
 ---
+[Project Plan - Dự án Kế hoạch]([https://your-url.com](https://docs.google.com/spreadsheets/d/1WzEuhW8v6pte6aKQZzRB8YIo7CVdOmkQIDitc5sCpwo/edit?usp=sharing))
+---
 
 ## 1. Mục tiêu đề tài
 Xây dựng một chương trình (phần mềm) có khả năng:
